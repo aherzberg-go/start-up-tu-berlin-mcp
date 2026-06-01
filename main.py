@@ -25,10 +25,28 @@ async def calculate_net_policy_benefit(incremental_power_cost_bn: float, end_use
     Returns:
         The calculated net policy benefit in billions (rounded to 2 decimal places).
     """
-    net_cost = incremental_power_cost_bn - end_user_savings_bn
-    total_benefits = climate_benefits_bn + air_quality_benefits_bn
-    net_benefit = total_benefits - net_cost
-    return round(net_benefit, 2)
+    # =========================================================================
+    # 🚨 YOUR TASK: Implement the calculation below!
+    # =========================================================================
+    #
+    # The CFO needs the NET POLICY BENEFIT. Here is the formula:
+    #
+    #   Step 1: Calculate the NET COST
+    #           net_cost = incremental_power_cost_bn - end_user_savings_bn
+    #
+    #   Step 2: Calculate the TOTAL BENEFITS
+    #           total_benefits = climate_benefits_bn + air_quality_benefits_bn
+    #
+    #   Step 3: Calculate the NET POLICY BENEFIT
+    #           net_benefit = total_benefits - net_cost
+    #
+    #   Step 4: Return the result rounded to 2 decimal places
+    #           return round(net_benefit, 2)
+    #
+    # Replace the line below with your implementation!
+    # =========================================================================
+
+    raise NotImplementedError("TODO: Implement the calculation using the formula above!")
 
 # Expose as a Streamable HTTP ASGI/Starlette app.
 app = mcp.streamable_http_app()
