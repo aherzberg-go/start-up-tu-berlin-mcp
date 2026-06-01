@@ -24,13 +24,7 @@ The file `main.py` contains the MCP tool skeleton, but the actual calculation is
 1. Open the **Cloud Shell Editor** by clicking the pencil icon (✏️ **Open Editor**) at the top of the Cloud Shell terminal.
 2. In the file explorer on the left, navigate to `start-up-tu-berlin-mcp/main.py`.
 3. Find the section marked with `🚨 YOUR TASK` — it contains the formula as comments.
-4. Replace the `raise NotImplementedError(...)` line with your Python implementation:
-   ```python
-   net_cost = incremental_power_cost_bn - end_user_savings_bn
-   total_benefits = climate_benefits_bn + air_quality_benefits_bn
-   net_benefit = total_benefits - net_cost
-   return round(net_benefit, 2)
-   ```
+4. Replace the `raise NotImplementedError(...)` line with your Python implementation.
 5. **Save the file** (`Ctrl+S` / `Cmd+S`).
 6. Switch back to the **Cloud Shell Terminal** (click **Open Terminal** at the top).
 
@@ -53,12 +47,6 @@ gcloud run deploy ecogrid-macro-economic-mcp \
 
 After a successful deployment, the terminal will output a Service URL (e.g., `https://ecogrid-macro-economic-mcp-xyz-ew.a.run.app`). Copy this URL.
 
-1. Go back to **Agent Studio** in the Cloud Console.
-2. Navigate to the **Tools** tab and click **Create Tool**.
-3. Select **Model Context Protocol (MCP)** as the tool type.
-4. Set the **Endpoint URL** to the Cloud Run Service URL you copied.
-5. Since we deployed with `--allow-unauthenticated`, you can set the authentication type to **None**.
-6. Save the tool and make sure it is attached to your agent in the main configuration.
-7. Update your Agent's Instructions so that it knows it *must* use this tool whenever it is asked to calculate the net financial benefit of a climate policy!
-
+Go back to **Agent Studio** and add the newly created **MCP Tool** to your Agent.
+   
 Good luck!
