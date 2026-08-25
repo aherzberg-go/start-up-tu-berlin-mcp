@@ -1,5 +1,5 @@
 fastapi
 uvicorn
 pydantic
-mcp
+mcp<2
 sse-starlette
